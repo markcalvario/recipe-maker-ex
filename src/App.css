@@ -1,0 +1,106 @@
+.search-form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0px auto;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.search-form .search-bar {
+  display: block;
+  margin: 5px 10px;
+  border: none;
+  padding: .25rem 1.5rem;
+}
+
+.search-form .search-button {
+  border-radius: 2em;
+  padding: .15rem 1.5rem;
+  background-color: #0e153a;
+  color: #e2f3f5;
+  border: 0;
+  cursor: pointer;
+}
+
+.search-form .search-button:focus {
+  border-radius: 2em;
+}
+
+.search-form .search-button:hover {
+  background-color: #e2f3f5;
+  color: #0e153a;
+  border: 1px solid #0e153a;
+}
+
+.recipes {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  padding: 10px 0 10px 5%;
+}
+
+.banner {
+  background-color: #cabbe9;
+  height: 50vh;
+  position: relative;
+}
+
+.banner h1 {
+  position: absolute;
+  top: 10%;
+  letter-spacing: 5px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  font-size: 3rem;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+@media (max-width: 575px) {
+  .banner h1 {
+    font-size: 2rem;
+  }
+  .search-form .search-bar {
+    margin: 5px 10px;
+    padding: 0 .25rem;
+  }
+  .search-form .search-button {
+    padding: 0 1.5rem;
+    font-size: .75rem;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 767px) {
+  .banner h1 {
+    font-size: 2rem;
+    top: 15%;
+  }
+  .search-form {
+    top: initial;
+    bottom: 10%;
+  }
+  .search-form .search-bar {
+    margin: 5px 10px;
+    padding: 0 .25rem;
+  }
+  .search-form .search-button {
+    padding: 0 1.5rem;
+    font-size: .75rem;
+  }
+}
+/*# sourceMappingURL=App.css.map */

@@ -1,0 +1,82 @@
+.recipe{
+    flex: 1 0 34%;
+    margin: 10px 2%;
+    display:flex;
+    flex-direction: column;
+    .recipe-title{
+        font-weight: 700;
+        letter-spacing: 2px;
+        margin: 5% 6% 5% 6%;
+    }
+    .recipe-image{
+        margin: 0 6% 0 6%;
+        width: auto;
+        max-width: 60%;
+        
+    }
+    .recipe-calories{
+        margin: 2% 6% 2% 6%;
+        font-style: italic;
+        font-weight: 900;
+        word-spacing: .5rem;
+        span{
+            font-style: normal;
+            font-weight: 400;
+        }
+    }
+    button{
+        width: 20%;
+        border: 0;
+        background-color: #fdfdfd;
+        color: #dfa8d1;
+        font-weight: bold;
+        margin: 0 6% 0 4%;
+    }
+    .recipe-ingredients{
+        margin: 0 6% 0 6%;
+    }
+}
+
+// Extra small devices (portrait phones, less than 576px)
+@media (max-width: 575px) {
+    .recipe{
+        margin: 10px 0;
+        .recipe-title{
+            margin: 5% 6% 5% 2%;
+        }
+        .recipe-image{
+            margin: 0 6% 0 2%;
+            max-width: initial;
+        }
+        .recipe-calories{
+            margin: 2% 6% 2% 2%;
+        }
+        button{
+            width: 20%;
+            margin: 0 6% 0 4%;
+        }
+        .recipe-ingredients{
+            margin: 0 6% 0 2%;
+        }
+    }
+}
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) and (max-width: 767px) {
+
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) and (max-width: 991px) {
+
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) and (max-width: 1199px) {
+
+}
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {
+
+}

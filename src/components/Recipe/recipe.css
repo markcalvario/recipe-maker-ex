@@ -1,0 +1,74 @@
+.recipe {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 34%;
+          flex: 1 0 34%;
+  margin: 10px 2%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.recipe .recipe-title {
+  font-weight: 700;
+  letter-spacing: 2px;
+  margin: 5% 6% 5% 6%;
+}
+
+.recipe .recipe-image {
+  margin: 0 6% 0 6%;
+  width: auto;
+  max-width: 60%;
+}
+
+.recipe .recipe-calories {
+  margin: 2% 6% 2% 6%;
+  font-style: italic;
+  font-weight: 900;
+  word-spacing: .5rem;
+}
+
+.recipe .recipe-calories span {
+  font-style: normal;
+  font-weight: 400;
+}
+
+.recipe button {
+  width: 20%;
+  border: 0;
+  background-color: #fdfdfd;
+  color: #dfa8d1;
+  font-weight: bold;
+  margin: 0 6% 0 4%;
+}
+
+.recipe .recipe-ingredients {
+  margin: 0 6% 0 6%;
+}
+
+@media (max-width: 575px) {
+  .recipe {
+    margin: 10px 0;
+  }
+  .recipe .recipe-title {
+    margin: 5% 6% 5% 2%;
+  }
+  .recipe .recipe-image {
+    margin: 0 6% 0 2%;
+    max-width: initial;
+  }
+  .recipe .recipe-calories {
+    margin: 2% 6% 2% 2%;
+  }
+  .recipe button {
+    width: 20%;
+    margin: 0 6% 0 4%;
+  }
+  .recipe .recipe-ingredients {
+    margin: 0 6% 0 2%;
+  }
+}
+/*# sourceMappingURL=recipe.css.map */
