@@ -12,8 +12,8 @@ const App =(props)=>{
 
   const [recipes, setRecipes] = useState([]);
   const [search, setSearch] = useState("");
-  const [query, setQuery] = useState("chicken")
-
+  const [query, setQuery] = useState("")
+  const [numberOfSearches, setNumberOfSearches]= useState(0);
   useEffect( ()=>{
     getRecipes();
   },[query])
@@ -24,7 +24,6 @@ const App =(props)=>{
     );
     const data= await response.json();
     setRecipes(data.hits)
-    console.log(data.hits)
   }
 
   const updateSearch=(e)=>{
@@ -34,9 +33,9 @@ const App =(props)=>{
   const getSearch=(e)=>{
     e.preventDefault();
     setQuery(search);
+    setNumberOfSearches(numberOfSearches+1);
     setSearch("")
   }
-
   return(
     <div>
       <div className="banner">
@@ -54,18 +53,16 @@ const App =(props)=>{
       </div>
       
       <div className="recipes">
-      {recipes.length===0 ? <h3>No recipe was found for {`${query}`} </h3>:
-          recipes.map((recipe,index)=>(
-            <Recipe key={index} 
-            title={recipe.recipe.label} 
-            calories={parseInt(`${recipe.recipe.calories}`)}   
-            image={recipe.recipe.image}
-            ingredients={recipe.recipe.ingredients}
-            alt={index}
-            />
-          ))}
-            
-          
+
+            {numberOfSearches===0 ? <h3></h3>: recipes.length===0 ? <h3>{`No recipe was found for ${query}`} </h3> : recipes.map((recipe,index)=>(
+              <Recipe key={index} 
+              title={recipe.recipe.label} 
+              calories={parseInt(`${recipe.recipe.calories}`)}   
+              image={recipe.recipe.image}
+              ingredients={recipe.recipe.ingredients}
+              alt={index}
+              />
+          )) }
         
       </div>
       
